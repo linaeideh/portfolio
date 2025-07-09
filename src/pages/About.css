@@ -1,0 +1,74 @@
+.about-container {
+  display: flex;
+  flex-direction: column; /* لجعل العناصر عمودية */
+  align-items: center;     /* توسيط أفقي */
+  justify-content: center; /* توسيط عمودي */
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1500px;
+  height: 600px;
+  margin: 2rem auto;
+  background-color: #f7fafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* صورة دائرية بالحجم الكبير */
+.about-container img {
+  width: 300px; /* تكبير الصورة */
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e2e8f0;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* تأثير التحويم */
+.about-container img:hover {
+  transform: scale(1.1);
+}
+
+/* النص تحت الصورة */
+.about-container p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2d3748;
+  line-height: 1.6;
+  text-align: center;
+  animation: slideIn 0.5s ease-in-out;
+  max-width: 800px;
+}
+
+/* زر تحت النص */
+.about-container button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3182ce;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-container button:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-2px);
+}
+
+/* استجابة الهواتف */
+@media (max-width: 768px) {
+  .about-container img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-container p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+}

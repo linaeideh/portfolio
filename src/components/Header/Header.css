@@ -1,0 +1,138 @@
+/* أساس الهيدر */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #dee4f0b5;
+  color: #433d3d;
+  font-size: 50px;
+  box-shadow: 0 2px 4px rgba(116, 150, 238, 0.33);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* قائمة التنقل العادية */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.navbar-menu li a {
+  color: #918a8adc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #63b3ed;
+  transform: translateY(-2px);
+}
+
+.navbar-menu li a.active {
+  color: #63b3ed;
+  border-bottom: 2px solid #63b3ed;
+}
+
+/* زر الهامبرغر */
+.navbar-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #433d3d;
+  cursor: pointer;
+  display: none; /* افتراضيًا مخفي */
+}
+
+/* قائمة الجوال */
+.navbar-mobile {
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  animation: slide-down 0.3s ease-out;
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.navbar-mobile-link {
+  display: block;
+  color: #1e3a8a;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-mobile-link:hover {
+  background: #3557a1;
+  color: #ffffff;
+}
+
+.navbar-mobile-cta {
+  display: block;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  background: #3557a1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.navbar-mobile-cta:hover {
+  background: #1d4ed8;
+}
+
+/* أنيميشن */
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ✅ ميديا كويري: الشاشة الصغيرة */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* إخفاء القائمة العادية */
+  }
+
+  .navbar-toggle {
+    display: block; /* إظهار زر الهامبرغر */
+  }
+}
+
+/* ✅ ميديا كويري: الشاشة الكبيرة */
+@media (min-width: 769px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: none !important; /* إخفاء قائمة الهاتف */
+  }
+}
