@@ -47,8 +47,7 @@ function SkillDetailsModal({ skill, onClose }) {
             &times;
           </button>
 
-          <h2 style={{ marginBottom: '20px', color: '#3498db' }}>تفاصيل مهارة {skill.name}</h2>
-
+          <h2 style={{ marginBottom: '20px', color: '#3498db' }}>Description: {skill.name}</h2>
           {/* <p style={{ fontSize: '1.1rem', marginBottom: '10px' }}>
             <strong>المصدر:</strong> {skill.details.source}
           </p> */}
@@ -61,10 +60,10 @@ function SkillDetailsModal({ skill, onClose }) {
 
           {skill.details.certificateUrl && (
             <div style={{ marginTop: '25px' }}>
-              <h3 style={{ marginBottom: '15px', color: '#2ecc71' }}>شهادة المهارة:</h3>
+              <h3 style={{ marginBottom: '15px', color: '#2b6cb0' }}>Certificate:</h3>
               <img
                 src={skill.details.certificateUrl}
-                alt={`شهادة ${skill.name}`}
+                alt={`Certificate:${skill.name}`}
                 style={{
                   maxWidth: '100%', height: 'auto', borderRadius: '8px',
                   boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
@@ -75,7 +74,7 @@ function SkillDetailsModal({ skill, onClose }) {
         </motion.div>
       </motion.div>
     </AnimatePresence>,
-    document.body // المودال سيتم عرضه هنا في الـ HTML
+    document.body 
   );
 }
 

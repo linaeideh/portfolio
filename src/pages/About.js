@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './About.css'; // Assuming you have a CSS file for styling
 import imgProfile from '../assets/1730223157268.jpg'; // ✨ تأكد من المسار الصحيح لصورة البروفايل ✨
 
-// ✨ استيراد مكون المهارات من مساره الصحيح ✨
+
 import Skills from '../pages/SkillsPage/Skills';
 
 // استورد أي مكونات أقسام أخرى لديك (إذا أردت دمجها في نفس الصفحة)
@@ -33,23 +33,23 @@ const About = () => { // قم بتغيير اسم المكون إلى HomePage �
                 </button>
             </section>
 
-            {/* ✨ قسم المهارات ✨ */}
+          
             <section id="skills-section"> {/* ✨ هذا هو الـ ID الذي سيستخدمه الـ Header ✨ */}
                 <Skills />
             </section>
 
-            {/* ✨ قسم التعليم (مثال) ✨ */}
+          
             {/* إذا كان لديك مكون Education وتريد ربطه بنفس الطريقة */}
             {/* <section id="education-section">
                 <Education />
             </section> */}
 
-            {/* ✨ قسم المشاريع (مثال) ✨ */}
+         
             {/* <section id="projects-section">
                 <Projects />
             </section> */}
 
-            {/* ✨ قسم التواصل (مثال) ✨ */}
+           
             {/* <section id="contact-section">
                 <Contact />
             </section> */}

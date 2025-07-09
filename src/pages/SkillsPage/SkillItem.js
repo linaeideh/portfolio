@@ -3,11 +3,9 @@
 import React, { useMemo } from 'react'; // استيراد useMemo
 import { motion } from 'framer-motion';
 
-// استخدام React.memo لتحسين الأداء الكلي للمكون
+
 const SkillItem = React.memo(({ skill, onClick }) => {
-  // 1. استخدام useMemo لتذكر كائن الـ style
-  // هذا يضمن أن كائن الـ style لن يُعاد إنشاؤه في كل مرة يُعاد فيها عرض SkillItem
-  // ما دامت التبعيات (التي لا توجد هنا، لذا ستُحسب مرة واحدة) لم تتغير.
+ 
   const itemStyle = useMemo(() => ({
     cursor: 'pointer',
     padding: '25px',
@@ -17,8 +15,7 @@ const SkillItem = React.memo(({ skill, onClick }) => {
     textAlign: 'center',
     backgroundColor: '#f9f9f9',
     transition: 'all 0.3s ease',
-    // خصائص الـ grid هنا قد لا تكون لها فائدة مباشرة للمحتوى الحالي بدون display: grid
-    // ولكن نتركها كما هي بناءً على طلبك
+    
     gridTemplateColumns: '1fr 1fr 1fr',
     gridTemplateRows: '1fr',
     gap: '20px',
@@ -27,12 +24,9 @@ const SkillItem = React.memo(({ skill, onClick }) => {
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '150px'
-  }), []); // مصفوفة تبعيات فارغة تعني أن الكائن يُحسب مرة واحدة فقط
+  }), []); 
 
-  // 2. استخدام useMemo (أو useCallback، وهو الأنسب للدوال) لتذكر دالة النقر
-  // هنا، بما أننا نمرر "skill" كحجة، يجب أن تكون "skill" ضمن التبعيات.
-  // ملاحظة: useCallback هو الأداة المخصصة لتذكر الدوال. useMemo يمكنه فعل ذلك أيضًا
-  // لكن useCallback هو اختصار خاص للدوال ويوصى به. سأستخدم useMemo بناءً على طلبك.
+  
   const handleClick = useMemo(() => {
     return () => onClick(skill);
   }, [onClick, skill]); // أعد إنشاء الدالة فقط إذا تغيرت onClick أو skill

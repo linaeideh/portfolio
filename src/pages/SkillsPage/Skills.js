@@ -6,9 +6,9 @@ import SkillDetailsModal from './SkillDetailsModal';
 import mySkillsData from '../../data/SkillsData'; // استيراد البيانات
 
 function Skills() {
-  const [selectedSkill, setSelectedSkill] = useState(null); // حالة المهارة المختارة
+  const [selectedSkill, setSelectedSkill] = useState(null);
 
-  // دالة تُستدعى عند النقر على أي SkillItem
+  
   const handleSkillClick = useCallback((skill) => {
     setSelectedSkill(skill);
   }, []);
