@@ -1,0 +1,233 @@
+ /* body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .education-container {
+      min-height: 100vh;
+      padding: 3rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .education-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      color: #1a202c;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .education-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .education-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-button:hover {
+      background-color: #f7fafc;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .education-button.active {
+      background-color: #3182ce;
+      color: #ffffff;
+      border-color: #2b6cb0;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .education-button span {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .education-button img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #4a5568;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .modal-close:hover {
+      color: #e53e3e;
+    }
+
+    .modal-content h3 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content p {
+      font-size: 1rem;
+      color: #4a5568;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .modal-content p strong {
+      color: #2d3748;
+    }
+
+    @media (max-width: 768px) {
+      .education-title {
+        font-size: 2rem;
+      }
+
+      .education-button {
+        max-width: 200px;
+      }
+
+      .education-button img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .modal-content {
+        padding: 1.5rem;
+      }
+
+      .modal-content h3 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .education-container {
+        padding: 2rem 0.5rem;
+      }
+
+      .education-button {
+        max-width: 100%;
+      }
+    } */
+
+
+    /* From Uiverse.io by gharsh11032000 */ 
+.card {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #f7f6f6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+  width: 90px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+    padding: 30px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+ 
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+    font-size: 28px; 
+    text-align: center;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+ margin: 105px 0 0;
+  font-size: 18px; /* زدت الحجم قليلاً */
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+}

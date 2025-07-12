@@ -1,6 +1,6 @@
 // src/components/Skills/SkillDetailsModal.jsx
 
-import React from 'react';
+
 import { createPortal } from 'react-dom'; // مهم جداً للمودال
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -47,20 +47,11 @@ function SkillDetailsModal({ skill, onClose }) {
             &times;
           </button>
 
-          <h2 style={{ marginBottom: '20px', color: '#3498db' }}>Description: {skill.name}</h2>
-          {/* <p style={{ fontSize: '1.1rem', marginBottom: '10px' }}>
-            <strong>المصدر:</strong> {skill.details.source}
-          </p> */}
-          {/* <p style={{ fontSize: '1.1rem', marginBottom: '10px' }}>
-            <strong>عدد الساعات:</strong> {skill.details.hours} ساعة
-          </p>
-          <p style={{ fontSize: '1.1rem', marginBottom: '20px' }}>
-            <strong>الوصف:</strong> {skill.details.description}
-          </p> */}
+      
 
           {skill.details.certificateUrl && (
             <div style={{ marginTop: '25px' }}>
-              <h3 style={{ marginBottom: '15px', color: '#2b6cb0' }}>Certificate:</h3>
+              <h3 style={{ marginBottom: '15px', color: '#4b4848' }}>Certificate:</h3>
               <img
                 src={skill.details.certificateUrl}
                 alt={`Certificate:${skill.name}`}

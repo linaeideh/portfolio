@@ -1,16 +1,16 @@
 .about-container {
   display: flex;
-  flex-direction: column; /* لجعل العناصر عمودية */
-  align-items: center;     /* توسيط أفقي */
-  justify-content: center; /* توسيط عمودي */
+  flex-direction: column; 
+  align-items: center;     
+  justify-content: center; 
   gap: 1.5rem;
   padding: 2rem;
   max-width: 1500px;
   height: 600px;
   margin: 2rem auto;
-  background-color: #f7fafc;
+  /* background-color: #f7fafc; */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   animation: fadeIn 1s ease-in-out;
 }
 

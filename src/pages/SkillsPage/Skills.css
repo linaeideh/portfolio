@@ -1,13 +1,13 @@
 .skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 10px 10px;
-  justify-items: center;
-  grid-auto-columns: auto;
+  grid-template-columns: repeat(3, auto); 
+  gap: 100px;
+  justify-content: center;
   align-items: center;
-
+  place-items: center; /* هذا يجمع بين justify-self و align-self */
 }
+
+
 
 .item:nth-child(1) {
   grid-area: 1 / 1 / 2 / 2;
